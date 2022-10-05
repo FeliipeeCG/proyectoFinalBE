@@ -2,6 +2,7 @@ const fs = require("fs");
 class Container {
   constructor(file) {
     this.file = file;
+    this.date = new Date().toLocaleString();
   }
   async save(object) {
     try {
@@ -14,6 +15,7 @@ class Container {
         return null;
       } else {
         object.id = dataParsed.length + 1;
+        object.timestamp = this.date;
         dataParsed.push(object);
         const updatedFile = JSON.stringify(dataParsed, null, " ");
         fs.promises.writeFile(this.file, updatedFile);
@@ -40,7 +42,7 @@ class Container {
         return null;
       }
     } catch (error) {
-      console.error(`Se produjo un error en saveById:${error}`);
+      console.error(`Se produjo un error en update:${error}`);
     }
   }
   async getById(idEntered) {
@@ -100,4 +102,5 @@ class Container {
     }
   }
 }
+
 module.exports = Container;

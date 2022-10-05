@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "products": [
+      {
+        "id": 1,
+        "price": 1200,
+        "thumbnail": "https://tap-multimedia-1172.nyc3.digitaloceanspaces.com/productimage/38896/889698396981.jpg",
+        "title": "Funko Pop Goku"
+      },
+      {
+        "id": 5,
+        "price": 1500,
+        "thumbnail": "https://funaticonews.com/wp-content/uploads/2021/09/Itachi-Uchiha-Funko-Pop-Exclusivo-Chase-Naruto-Shippuden-Figura-Anbu-1024x1024.jpg",
+        "title": "Funko Itachi"
+      }
+    ],
+    "total": 2700
+  },
+  {
+    "id": 2,
+    "products": [
+      {
+        "id": 4,
+        "price": 2000,
+        "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_922060-MLA45128591746_032021-O.webp",
+        "title": "Funko Deku"
+      },
+      {
+        "id": 2,
+        "price": 2000,
+        "thumbnail": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/384/781/products/71gv3bdyfyl-_ac_sl1200_1-896b1af1c022b5b50616457947409350-640-0.jpg",
+        "title": "Funko Kurama"
+      }
+    ],
+    "total": 4000
+  }
+]
