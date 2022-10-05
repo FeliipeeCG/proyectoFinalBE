@@ -5,7 +5,7 @@ const completedFields = (req, res, next) => {
   const { title, price, thumbnail } = req.body;
   title && price && thumbnail
     ? next()
-    : res.status(300).send({ message: "Debe completar todos los campos" });
+    : res.status(300).send({ message: "Complete todo por favor" });
 };
 router.get("/", controller.getAll);
 router.get("/:id", controller.getById);

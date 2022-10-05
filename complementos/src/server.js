@@ -11,6 +11,7 @@ const Container = require("./models/container");
 const contenedor = new Container("products.json");
 const Messages = require("./models/Chat");
 const messages = new Messages("chat.json");
+
 io.on("connection", async (socket) => {
   console.log(`New Connection: ${socket.id}`);
 
@@ -29,7 +30,7 @@ io.on("connection", async (socket) => {
   socket.emit("chat:history", allMessages);
 
   socket.on("chat:message", (data) => {
-    Messages.push(data);
+    messages.saveMessage(data);
     io.sockets.emit("chat:history", allMessages);
   });
 

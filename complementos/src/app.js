@@ -12,5 +12,14 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use("/", express.static(path.join(__dirname, "../public")));
 app.use("/", indexRoute);
-
+const { engine } = require("express-handlebars");
+app.engine(
+  "hbs",
+  engine({
+    extname: ".hbs",
+    defaultLayout: path.join(__dirname, "/views/layout/main.hbs"),
+    layoutsDir: path.join(__dirname, "./views/layout"),
+    partialsDir: path.join(__dirname, "/views/partials"),
+  })
+);
 module.exports = app;

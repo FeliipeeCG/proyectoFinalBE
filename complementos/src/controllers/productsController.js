@@ -1,5 +1,5 @@
 const Container = require("../models/container");
-const contenedor = new Container("products.txt");
+const contenedor = new Container("products.json");
 const controller = {};
 controller.getAll = async (req, res) => {
   const data = await contenedor.getAll();
@@ -10,7 +10,7 @@ controller.getById = async (req, res) => {
   const data = await contenedor.getById(req.params.id);
   data
     ? res.status(200).json(data)
-    : res.status(404).json({ error: "Producto no encontrado" });
+    : res.status(404).json({ error: "No se encontró el producto" });
 };
 controller.post = async (req, res) => {
   const { title, price, thumbnail } = req.body;
@@ -26,7 +26,7 @@ controller.put = async (req, res) => {
 
   data != null
     ? res.status(200).json({ message: `Producto ${id} modificado con éxito` })
-    : res.status(404).json({ error: "Producto no encontrado" });
+    : res.status(404).json({ error: "No se encontró el producto" });
 };
 controller.delete = async (req, res) => {
   const data = await contenedor.deleteById(req.params.id);
