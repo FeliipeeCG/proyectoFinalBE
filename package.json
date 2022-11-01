@@ -10,15 +10,28 @@
   "author": "Juan Felipe Cerquin",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
+    "env": "^0.0.2",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
+    "firebase-admin": "^11.2.0",
     "knex": "^2.3.0",
+    "mongoose": "^6.7.0",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.20",
     "pug": "^3.0.2",
     "socket.io": "^4.5.2",
     "sqlite3": "^5.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeliipeeCG/proyectoFinalBE.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/FeliipeeCG/proyectoFinalBE/issues"
+  },
+  "homepage": "https://github.com/FeliipeeCG/proyectoFinalBE#readme"
 }
